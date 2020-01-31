@@ -1,0 +1,106 @@
+.post{
+    padding: 10px;
+    margin-left: 5px;
+    border: solid black;
+    border-style: outset;
+    border-width: 8px;
+    border-collapse: separate;
+    background: rgb(155, 155, 167);
+}
+.home{
+    background: rgba(192, 190, 190, 0.877);
+    background-size: cover;
+}
+.article_img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;  
+}
+
+.heading_text{
+    text-align: center; 
+    font-size:40px;
+    padding:80px;
+    font-family: 'Merriweather', serif;  
+}
+
+.article-content{
+    display: inline-block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    padding-left: 15px;
+}
+
+#post_author{
+    font-size: 25px;
+    padding-left: 15px;
+    color: rgb(36, 13, 240);
+}
+
+#navbar{
+    background: rgb(209, 160, 114);
+    padding: 18px;
+}
+
+#myid{
+    font-family: Georgia;
+    font-size: 20px;
+}
+
+.post_heading{
+    padding-top: 80px;
+    text-align: center;   
+}
+
+#post_head{
+    font-size: 35px;
+    font-family: 'Anton', sans-serif;
+    color: rgb(14, 48, 240);
+}
+
+.requiredField{
+    font-size: 30px;
+    padding-left: 40%;
+}
+
+.media{
+    padding-top: 10px;
+}
+
+.post_detail_class{
+    padding-top: 80px;
+}
+
+#post_article_img{
+    margin-left: 20px;
+}
+
+.post_media-body{
+    padding-left: 40px;
+}
+
+.profile_class{
+    padding-top: 80px;
+}
+
+#profile_image{
+    padding: 10px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;  
+}
+
+#profile_info{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 35px;
+}
+
+#web_logo{
+    font-size: 30px;
+    color: rgb(18, 19, 18);
+    font-family: 'Uncial Antiqua', cursive;
+    padding-left: 30px;
+    font-style: italic;
+    
+}

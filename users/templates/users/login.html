@@ -1,0 +1,30 @@
+{% extends "users/base.html" %}
+{% load crispy_forms_tags %}
+{% block login-content %}
+    <header>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{message.tags }}">
+                        {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </header>
+    <div class="login_page">
+        <div class="container-fluid">
+            <form method="POST" class="login_form" >
+                {% csrf_token %}
+                <fieldset class="form_group">
+                        <legend class="border-bottom " id="login">Log In</legend>
+                        {{ form|crispy }}
+                </fieldset>
+                <div class="form-group" >
+                    <button class="btn btn-outline-info" type="submit" id="login_button">Log In</button>
+                </div>    
+                <div>
+                    <a href="{% url 'password_reset' %}" class="forgot_pass">Forgot Password?<a>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

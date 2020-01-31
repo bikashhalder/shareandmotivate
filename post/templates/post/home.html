@@ -1,0 +1,27 @@
+{% extends "post/base.html"%}
+{% block home-content %}
+<div class="home"> 
+<div class="heading_text">Stories That Helped Someone <br> <span > Post Your Stories</span></div>
+    {% for post in posts %}
+    <br><div class="home"> 
+    <div class="post">
+    <div class="row mx-md-5">
+        <div class="col px-mb-5">
+            <article class="media content-section">
+                <img class="article_img" src="{{ post.author.profile.image.url }}">
+                <div class="media-body">
+                    <div class="article-metadata">
+                        <a class="mr-2" id="post_author" href="{% url 'post-detail' post.id %}">{{ post.author }}</a>
+                        <small class="text-muted">{{ post.date_posted|date:"d F Y" }}</small>
+                    </div>
+                    <div>
+                        <p class="article-content">{{ post.content }}</p> 
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+    </div>
+</div>
+    {% endfor %}
+{% endblock%}

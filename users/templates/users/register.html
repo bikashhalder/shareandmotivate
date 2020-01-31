@@ -1,0 +1,35 @@
+{% extends "users/base.html" %}
+{% load crispy_forms_tags %}
+{% block register-content %}
+    <header>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{message.tags }}">
+                        {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </header>
+    <div class="container-fluid">
+        <div class="background-image">      
+        <h1 class="headingline" ><strong>SHARE AND INSPIRE WITH YOUR HELPING STORIES</strong></h1>
+            <div class="container">
+                <form method="POST" name="register_form" autocomplete="off">
+                    {% csrf_token %}
+                    <fieldset class="form-group">
+                        <legend class="border-bottom nb-1 register">Register And Join Today</legend>
+                        <div class="form_design">  {{ form|crispy }} </div>                                                
+                    </fieldset>
+                    <div class="form-group" align="center">
+                        <button class="btn btn-outline-info" type="submit" style="background-color: rgb(6, 6, 231); ">Sign Up</button>
+                     </div>
+                </form>
+                    <div class="border-top pt-4">
+                    <legend class="text" style="color: black; padding-top:30px; padding-bottom:20px; background-color:burlywood;text-align:center;">
+                    Already Have an Account? <a class="ml-2" href="{% url 'login' %}" style="background-color: blue;">Sign In</a>
+                     </legend>
+                    </div>
+            </div>
+            </div>
+    </div>
+{% endblock %}
